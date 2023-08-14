@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("/public/img/back1.jpg");
+ background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.card{
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  background-color: #44b09e;
+  background-image: linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%);
+}
+
+.navbar-brand{
+  font-size: 20px;
+}
+.app{
+  font-family: 'Noto Serif', serif;
+  
+  
+}
+/* .main-cont{
+  background-color: #b3cdd1;
+} */
+
+.aqi{
+  margin-top: 40px;
+}
+.current{
+  margin-top: 100px
+}
+.footer{
+  margin-top: 30PX;
+  background-color: #558DC1;
+;
+
+}
+.dev-head{
+  text-align: center;
+  margin-top: 20px;
+}
+p.city-text{
+  font-size: 30px;
+}
+p.temp-text{
+  font-size: 40px;
+}
+p.current-text{
+  font-size: 20px;
+}
+.wind {
+  font-size: 25px;
+}
+.humidity{
+  font-size: 30px;
+}
+ .visibility{
+  font-size: 30px;
+}
+.date{
+  font-size: 30px;
+}
+.dev-name{
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+
+}
+.dev-name-head{
+  color: rgb(0, 0, 0);
+ 
+  font-size: 30px;
+  text-decoration: underline;
+}
+.dev-name-email{
+color:black;
+  font-size: 20px;
+}
+.email-a{
+  color: black;
+}
+
+.weather-icon{
+  width: 100%;
+ 
+
+}
+span{
+  font-size: 30px;
+  color: rgb(231, 8, 26);
+}
