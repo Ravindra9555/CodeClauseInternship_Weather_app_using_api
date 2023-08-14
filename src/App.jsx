@@ -6,12 +6,12 @@ import { useState } from "react";
 
 function App() {
   let date = new Date().toLocaleDateString();
-  const api = process.env.REACT_APP_API;  //api key comming from .env file 
+  const api = process.env.REACT_APP_API; //api key comming from .env file
 
   const [data, setdata] = useState(true);
   const [city, setCity] = useState("mumbai");
 
-  //call api with axios  
+  //call api with axios
 
   const fetchData = async () => {
     try {
@@ -36,22 +36,27 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <nav className="navbar ">
-        <img
-          className="navbar-brand"
-          src="img/weather.png"
-          height="110"
-          alt="weather icon"
-        />
-        <a href="https://www.weatherapi.com/" title="Free Weather API">
-          <img
-            src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png"
-            alt="Weather data by WeatherAPI.com"
-            border="0"
-          />
-        </a>
-        <div className="container justify-content-center" on>
+    <div className="app ">
+      <nav class="navbar container">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img
+              className="navbar-brand"
+              src="img/weather.png"
+              width="20%"
+              alt="weather icon"
+            />
+            <a href="https://www.weatherapi.com/" title="Free Weather API">
+              <img
+                src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png"
+                alt="Weather data by WeatherAPI.com"
+                border="0"
+              />
+            </a>
+          </a>
+          <p className=" date mx-auto">
+            <span>{date}</span>
+          </p>
           <form className="d-flex " role="search" onSubmit={handleSearch}>
             <input
               className="form-control me-2"
@@ -64,10 +69,9 @@ function App() {
             </button>
           </form>
         </div>
-
-        <p className=" date mx-auto"> <span>{date}</span>  </p>
       </nav>
-{/* this is render after the api call  */}
+
+      {/* this is render after the api call  */}
       {data && data.current && (
         <div className="container main-cont">
           <div className="row aqi">
@@ -111,7 +115,8 @@ function App() {
                       Feels Like &nbsp; <span>{data.current.feelslike_c}</span>{" "}
                     </p>
                     <p className="wind">
-                      Precipition &nbsp; <span>{data.current.precip_mm} mm</span>{" "}
+                      Precipition &nbsp;{" "}
+                      <span>{data.current.precip_mm} mm</span>{" "}
                     </p>
                     <p className="current-text">
                       Current Weather &nbsp;
@@ -155,7 +160,7 @@ function App() {
           </div>
         </div>
       )}
-    
+
       <div className="footer row">
         <div className="col-sm-6 dev-head">
           <h3 className="dev-name-head">Import Links</h3>
